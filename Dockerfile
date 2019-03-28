@@ -5,7 +5,7 @@ WORKDIR /
 ENV NPS_VERSION 0.20.2
 
 RUN set -x && \
-  mkdir /npc && mkdir /npc/conf && cd /npc && \
+  mkdir -p /npc/conf && cd /npc && \
   wget --no-check-certificate https://github.com/cnlh/nps/releases/download/v${NPS_VERSION}/linux_amd64_client.tar.gz && \ 
 	tar xzf linux_amd64_client.tar.gz && \
 	mv npc.conf ./conf && \

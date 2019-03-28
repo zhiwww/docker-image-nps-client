@@ -8,7 +8,7 @@ ENV NPS_PORT 8284
 ENV NPS_CLIENT_KEY 1234
 
 RUN set -x && \
-	wget --no-check-certificate https://github.com/cnlh/nps/releases/download/v${NPS_VERSION}/linux_amd64_server.tar.gz && \ 
+  wget --no-check-certificate https://github.com/cnlh/nps/releases/download/v${NPS_VERSION}/linux_amd64_client.tar.gz && \ 
 	tar xzf linux_amd64_server.tar.gz && \
 	rm -rf *.tar.gz
 

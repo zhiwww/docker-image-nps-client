@@ -3,8 +3,7 @@ MAINTAINER zhiwww <zhiwww@gmail.com>
 
 WORKDIR /
 ENV NPS_VERSION 0.20.2
-ENV NPS_SERVER 1.1.1.1
-ENV NPS_PORT 8024
+ENV NPS_SERVER_ADDR 1.1.1.1:8024
 ENV NPS_CLIENT_KEY 1234
 
 RUN set -x && \
@@ -15,4 +14,4 @@ RUN set -x && \
 
 VOLUME /npc/npc.conf
 
-CMD /npc/npc -server=${NPS_SERVER}:${NPS_PORT} -vkey=${NPS_CLIENT_KEY}
+CMD /npc/npc -server=${NPS_SERVER_ADDR} -vkey=${NPS_CLIENT_KEY}
